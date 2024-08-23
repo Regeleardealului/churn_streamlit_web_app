@@ -1,0 +1,1 @@
+web: streamlit run churn_app.py
