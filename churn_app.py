@@ -9,16 +9,16 @@ import seaborn as sns
 
 st.set_page_config(
     page_title='Churn Predictor App',
-    page_icon='C:/Users/sogor/OneDrive/Documents/DataScientist_practice/python/customer_churn_app/app_logo.png',
+    page_icon='app_logo.png',
     layout='wide'
 ) 
 
-data = pd.read_csv('C:/Users/sogor/OneDrive/Documents/DataScientist_practice/python/customer_churn_app/cleaned_churn.csv')
+data = pd.read_csv('cleaned_churn.csv')
 
-with open('C:/Users/sogor/OneDrive/Documents/DataScientist_practice/python/customer_churn_app/scaler.pkl', 'rb') as file:
+with open('scaler.pkl', 'rb') as file:
     scaler = pickle.load(file)
 
-with open('C:/Users/sogor/OneDrive/Documents/DataScientist_practice/python/customer_churn_app/churn_model.pkl', 'rb') as model_file:
+with open('churn_model.pkl', 'rb') as model_file:
     model = pickle.load(model_file)
 
 st.title("Customer Churn Prediction")
